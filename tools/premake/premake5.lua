@@ -639,7 +639,7 @@ project "csllbc_testsuite"
 
 -- ****************************************************************************
 -- luasrc library(liblua) compile setting
-local LUA_SRC_PATH = "../../wrap/lullbc/lua"
+local LUA_SRC_PATH = "../../wrap/lullbc/lua/src"
 project "lullbc_lualib"
     -- language, kind
     language "c++"
@@ -687,7 +687,6 @@ project "lullbc_lualib"
     enable_multithread_comp()
 
 -- lua executable compile setting
-local LUA_SRC_PATH = "../../wrap/lullbc/lua"
 project "lullbc_luaexec"
     -- language, kind
     language "c++"
@@ -704,8 +703,7 @@ project "lullbc_luaexec"
 
     -- defines
     defines {
-        "LUA_COMPAT_5_1",
-        "LUA_COMPAT_5_2",
+        "LUA_COMPAT_5_3",
     }
 
     -- dependents
