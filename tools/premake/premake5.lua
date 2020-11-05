@@ -660,14 +660,10 @@ project "lullbc_lualib"
 
     -- defines
     defines {
-        "LUA_COMPAT_5_1",
-        "LUA_COMPAT_5_2",
+        "LUA_COMPAT_5_3",
     }
     filter { "system:windows" }
         defines { "LUA_BUILD_AS_DLL" }
-    filter {}
-    filter { "system:not windows" }
-        defines { "LUA_USE_DLOPEN" }
     filter {}
 
     -- optimize
